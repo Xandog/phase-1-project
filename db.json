@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Cornpop",
+            "bio": "British Shorthair cat with black fur!",
+            "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jUdZs7IRaq_PI8EXVBZJ1KL77LpreZdWIg&usqp=CAU"
+        }
+    ],
+    "posts": [
+        {
+            "userId": 1,
+            "id": 1,
+            "image": "https://i.pinimg.com/originals/50/21/54/5021547e6fba69cee2283f62b502b7f8.jpg",
+            "likes": 25
+        }
+    ]
+}
