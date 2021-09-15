@@ -2,17 +2,133 @@
     "users": [
         {
             "userId": 1,
-            "name": "Cornpop",
-            "bio": "British Shorthair cat with black fur!",
-            "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jUdZs7IRaq_PI8EXVBZJ1KL77LpreZdWIg&usqp=CAU"
+            "name": "Bobycat",
+            "bio": "British Shorthair cat with brown fur!",
+            "profile": "https://images.pexels.com/photos/1100978/pexels-photo-1100978.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        },
+        {
+            "userId": 2,
+            "name": "Growltiger",
+            "bio": "Brown cat with green eyes!",
+            "profile": "https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        },
+        {
+            "userId": 3,
+            "name": "Tbbycat",
+            "bio": "Cute cat!",
+            "profile": "https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
         }
     ],
     "posts": [
         {
             "userId": 1,
             "id": 1,
-            "image": "https://i.pinimg.com/originals/50/21/54/5021547e6fba69cee2283f62b502b7f8.jpg",
+            "image": "media.istockphoto.com/photos/naughty-cat-ate-ice-cream-picture-id1220642080?k=20&m=1220642080&s=612x612&w=0&h=mpWq5qd3umZPPBBoXN51FgaDT4Wxv7scYDs8ODexWBs=",
             "likes": 25
+        },
+        {
+            "userId": 1,
+            "id": 2,
+            "image": "https://i1.wp.com/www.goodigcaptions.com/wp-content/uploads/2020/03/Cat-Instagram-Captions.jpg?fit=1282%2C791&ssl=1",
+            "likes": 30
+        },
+        {
+            "userId": 1,
+            "id": 3,
+            "image": "https://i.redd.it/h14pjp259s961.jpg",
+            "likes": 45
+        },
+        {
+            "userId": 1,
+            "id": 4,
+            "image": "https://i.pinimg.com/564x/40/2d/cd/402dcda14b7cc3de128fc57540af2f8b.jpg",
+            "likes": 90
+        },
+        {
+            "userId": 1,
+            "id": 5,
+            "image": "https://i.pinimg.com/736x/79/4b/3f/794b3fdd84df17e820a9bce0c8af9fb7.jpg",
+            "likes": 100
+        },
+        {
+            "userId": 1,
+            "id": 6,
+            "image": "https://www.the-sun.com/wp-content/uploads/sites/6/2021/04/NINTCHDBPICT000648954806.jpg",
+            "likes": 250
+        },
+        {
+            "userId": 2,
+            "id": 1,
+            "image": "https://i.pinimg.com/originals/8c/ab/4e/8cab4e46f19b1c4ae0ed8ff6c5115e7d.jpg",
+            "likes": 250
+        },
+        {
+            "userId": 2,
+            "id": 2,
+            "image": "https://i.imgur.com/crDga3e.jpg",
+            "likes": 250
+        },
+        {
+            "userId": 2,
+            "id": 3,
+            "image": "https://pbs.twimg.com/media/E5AJJWjXMAIkVm9.jpg",
+            "likes": 2500
+        },
+        {
+            "userId": 2,
+            "id": 4,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl1lbSHBOgYJ2Tk9h28HtSp2oZ5kF0FjCDVijDJmgAmCT66_QHOuB14AdoyHPm-5Fq11Y&usqp=CAU",
+            "likes": 250
+        },
+        {
+            "userId": 2,
+            "id": 5,
+            "image": "https://i.pinimg.com/564x/88/e0/69/88e069b5ad170bdb33c50195b9e334f5.jpg",
+            "likes": 250
+        },
+        {
+            "userId": 2,
+            "id": 6,
+            "image": "https://i.pinimg.com/474x/3a/a8/d9/3aa8d9231fcf0da5efa2e84bd87077c4.jpg",
+            "likes": 20
+        },
+        {
+            "userId": 3,
+            "id": 1,
+            "image": "https://thumbor.granitemedia.com/cat-memes/lWRBFUEiQjYLtPs8XBKibZtLLq8=/480x480/filters:format(webp):quality(80)/granite-web-prod/91/09/910963e0fbf947e1a6368be30e73ed19.jpeg",
+            "likes": 500
+        },
+        {
+            "userId": 3,
+            "id": 2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLL94QLoMfQbErE6WFOYX4KnIqA0Dn8LmDQ&usqp=CAU",
+            "likes": 250
+        },
+        {
+            "userId": 3,
+            "id": 3,
+            "image": "https://i.redd.it/e79z43cdmwx21.jpg",
+            "likes": 250
+        },
+        {
+            "userId": 3,
+            "id": 4,
+            "image": "https://i.natgeofe.com/n/3861de2a-04e6-45fd-aec8-02e7809f9d4e/02-cat-training-NationalGeographic_1484324.jpg",
+            "likes": 250
+        },
+        {
+            "userId": 3,
+            "id": 5,
+            "image": "https://static.independent.co.uk/2021/06/16/08/newFile-4.jpg?width=982&height=726&auto=webp&quality=75",
+            "likes": 280
+        },
+        {
+            "userId": 3,
+            "id": 6,
+            "image": "https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_64/v1565279671/shape/mentalfloss/578211-gettyimages-542930526.jpg?itok=zmmJgd_3",
+            "likes": 500
         }
     ]
 }
+
+
