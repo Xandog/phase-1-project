@@ -1,0 +1,117 @@
+body{
+    background-color: #fafafa;
+    margin: 0;
+}
+.logo{
+    text-decoration: none;
+    padding-top: 0;
+    
+}
+.logo>img{
+    vertical-align: middle;
+    height: 50px;
+    width: 140px;
+    margin-left: 10em;
+   
+}
+
+nav{
+    background-color: #fff;
+    height: 3.3em;
+    line-height: 3.3em;
+    padding: 0 13.3em ;
+    border-bottom: 0.1px solid #dbdbdb;
+}
+
+.searchbar{
+    background: #fafafa;
+    margin-left: 15em;
+    height: 2em;
+    width: 19em;
+    border: 1px solid #dbdbdb;
+}
+.searchbar::placeholder{
+    text-align: center;
+    color: #808080;
+}
+
+.nav-links{
+    margin-left: 10em;
+}
+.nav-links>a{
+    margin-left: 2em;
+}
+.nav-links i{
+    transform: scale(1.6);
+    color: #252525;
+    vertical-align: middle;
+    transition-duration: 0.2s;
+}
+.nav-links i:hover{
+color: rgb(243, 41, 41);
+}
+.container{
+    padding: 0 15%;
+}
+
+.bio{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-bottom: 1px solid #dbdbdb;
+    height: 15em;
+    padding: 3em 0 0 10em;
+}
+.profile-photo{
+    background-color: brown;
+    width: 10em;
+    height: 10em;
+}
+.profile-photo>img{
+    height: 120%;
+    width: 120%;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.profile-info .username{
+    font-size: 1.8em;
+    color: #545454;
+}
+.profile-info button{
+    color: #fff;
+    background-color: #0095f6;
+    font-size: 1.1em;
+    width: 6em;
+    height: 2em;
+    border: unset;
+    cursor: pointer;
+}
+.gallery-nav{
+    height: 3.5em;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 5em;
+    margin-bottom: 2em;
+    
+}
+.item{
+    height: 18em;
+    width: 19em;
+   
+}
+.item>img{
+opacity: 0.9;
+width: 110%;
+height: 100%;
+object-fit: cover;
+transform: scale(1.15);
+transition: transform 0.5s, opacity 0.5s;
+}
+
+.item>img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
