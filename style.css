@@ -21,6 +21,8 @@ nav{
     line-height: 3.3em;
     padding: 0 13.3em ;
     border-bottom: 0.1px solid #dbdbdb;
+    position: fixed;
+
 }
 
 .searchbar{
@@ -73,10 +75,22 @@ color: rgb(243, 41, 41);
     border-radius: 50%;
 
 }
+.info  {
+    float: right;
+    margin-left: 200px;
+    color: #545454;
+  
+}
+h1{
+    color: #545454;
+    margin-top: 0px;
+}
 
 .profile-info .username{
     font-size: 1.8em;
     color: #545454;
+    float: left;
+    
 }
 .profile-info button{
     color: #fff;
@@ -86,6 +100,9 @@ color: rgb(243, 41, 41);
     height: 2em;
     border: unset;
     cursor: pointer;
+    margin-top: 28px;
+    margin-left: 28px;
+    float: left;
 }
 .gallery-nav{
     height: 3.5em;
@@ -100,6 +117,7 @@ color: rgb(243, 41, 41);
 .item{
     height: 18em;
     width: 19em;
+   
    
 }
 .item>img{
