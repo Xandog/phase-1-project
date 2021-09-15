@@ -1,6 +1,5 @@
 // Global variables:
-const userList = document.querySelector('');
-const userInfo = document.querySelector('.container');
+//const userList = document.querySelector('.main');
 
 
 // A request to the JSON server for user information:
@@ -16,9 +15,23 @@ fetch(BASE_URL)
 // stored in the JSON data base.
 // Parameter(s): user object
 function renderUserPage(user){
+    renderUserList(user);           // Renders the User List at the top of the page
+
     
-    //adds a user to the "Users" list on the page
-    const username = document.createElement('p');
+}
+
+
+//adds a user to the status-card elements on the page
+function renderUserList(user){
+    const username = document.querySelector('.username');
+    const profilePic = document.querySelector('.profile-pic');
+    const identifier;
+
     username.textContent = user.name;
-    userList.appendChild(username);
+    profilePic.src = user.profile;
+    identifier = user.id;
+
+    const userInfo = document.querySelector('.status-card')[identifier-1];
+    userInfo.appendChild(username);
+    userInfo.appendChild(profilePic);
 }
