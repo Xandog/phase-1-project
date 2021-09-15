@@ -1,37 +1,25 @@
-// Global variables:
-//const userList = document.querySelector('.main');
-
-
 // A request to the JSON server for user information:
-const BASE_URL = '';
+const BASE_URL = 'http://localhost:3000/users';
 
 fetch(BASE_URL)
-.then((res) => res.json());
-.then((userData) => userData.users.forEach((user) => renderUserPage(user))); // Sends individual user data for rendering
+.then((res) => res.json())
+.then((userData) => userData.forEach((user, index) => renderUserPage(user, index))) // Sends individual user object for rendering
 
 
 
 // renderUserPage renders pre-made user pages
 // stored in the JSON data base.
-// Parameter(s): user object
-function renderUserPage(user){
-    renderUserList(user);           // Renders the User List at the top of the page
-
-    
+// Parameter(s): current user object, current index
+function renderUserPage(user, index){
+    renderUserBar(user, index);           // Renders the User Bar at the top of the page   
 }
 
 
-//adds a user to the status-card elements on the page
-function renderUserList(user){
-    const username = document.querySelector('.username');
-    const profilePic = document.querySelector('.profile-pic');
-    const identifier;
+// adds a user to the status-card elements on the page
+function renderUserBar(user, index){
+    const profilePic = document.getElementById(`profile-pic-${index+1}`);
+    const username = document.getElementById(`username-${index+1}`);
 
-    username.textContent = user.name;
     profilePic.src = user.profile;
-    identifier = user.id;
-
-    const userInfo = document.querySelector('.status-card')[identifier-1];
-    userInfo.appendChild(username);
-    userInfo.appendChild(profilePic);
+    username.textContent = user.name;
 }
