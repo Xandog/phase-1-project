@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function(){
         // }
 
         const userPost = document.getElementById(`post-${index}`);
-            //const postLikes = document.getElementById(`${}`);
+        //const postLikes = document.getElementById(`${}`);
         
-            userPost.src = post.image;
+        userPost.src = post.image;
     }
 })
