@@ -14,7 +14,7 @@
         },
         {
             "userId": 3,
-            "name": "Tbbycat",
+            "name": "Tabycat",
             "bio": "Cute cat!",
             "profile": "https://images.pexels.com/photos/3777622/pexels-photo-3777622.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
         }
@@ -23,7 +23,7 @@
         {
             "userId": 1,
             "id": 1,
-            "image": "media.istockphoto.com/photos/naughty-cat-ate-ice-cream-picture-id1220642080?k=20&m=1220642080&s=612x612&w=0&h=mpWq5qd3umZPPBBoXN51FgaDT4Wxv7scYDs8ODexWBs=",
+            "image": "https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "likes": 25
         },
         {
@@ -65,7 +65,7 @@
         {
             "userId": 2,
             "id": 2,
-            "image": "https://i.imgur.com/crDga3e.jpg",
+            "image": "https://wallpaperaccess.com/full/428217.jpg",
             "likes": 250
         },
         {
