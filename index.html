@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
         rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -32,14 +33,17 @@
                     <div class="status-card"id="card-0">
                         <div class="profile-pic"><img id="profile-pic-0"src="https://play-lh.googleusercontent.com/6nVZ5tlgirX8XHk7h2dyfBVQ8hdm69_Kw9tW9tgeAUbhLW3c-8xLhd1XJdm7-o2YkBI" alt=""></div>
                         <p class="username"id="username-0">user_name_1</p>
+                        <button type="button" class="Follow">Follow</button>
                     </div>
                     <div class="status-card"id="card-1">
                         <div class="profile-pic"><img id="profile-pic-1"src="https://play-lh.googleusercontent.com/6nVZ5tlgirX8XHk7h2dyfBVQ8hdm69_Kw9tW9tgeAUbhLW3c-8xLhd1XJdm7-o2YkBI" alt=""></div>
                         <p class="username"id="username-1">user_name_2</p>
+                        <button type="button" class="Follow">Follow</button>
                     </div>
                     <div class="status-card"id="card-2">
                         <div class="profile-pic"><img id="profile-pic-2"src="https://play-lh.googleusercontent.com/6nVZ5tlgirX8XHk7h2dyfBVQ8hdm69_Kw9tW9tgeAUbhLW3c-8xLhd1XJdm7-o2YkBI" alt=""></div>
                         <p class="username"id="username-2">user_name_3</p>
+                        <button type="button" class="Follow">Follow</button>
                     </div>
                     
             </div>
@@ -47,27 +51,21 @@
     </section>
 
     <section class="gallery-nav">
-
         <div class="gallery">
-            <a href="#" class="item">
+            <div class="post-img">
                 <img id="post-0" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="" />
-            </a>
-            <a href="#" class="item">
                 <img id="post-1" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="" />
-            </a>
-            <a href="#" class="item">
                 <img id="post-2" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="" />
-            </a>
-            <a href="#" class="item">
                 <img id="post-3" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="" />
-            </a>
-            <a href="#" class="item">
                 <img id="post-4" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="" />
-            </a>
-            <a href="#" class="item">
                 <img id="post-5" src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg" alt="" />
-            </a>
+            </div>
         </div>
+        <div class="heart-btn">
+            <div class="content">
+              <span class="heart"></span>
+              <span class="numb"></span>
+            </div>
     </section>
     <footer>
         <div class="row">
@@ -87,6 +85,7 @@
             </p>
         </div>
     </footer>
+
     <script defer src="index.js"></script>
     <script src="https://kit.fontawesome.com/c6a8fbc00e.js" crossorigin="anonymous"></script>
 </body>
