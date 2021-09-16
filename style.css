@@ -167,7 +167,6 @@ body {
 
   width: 100%;
   padding: 0px 0px;
-  display: grid;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
@@ -175,24 +174,26 @@ body {
   background-size: cover;
   height: 100vh;
 }
-.gallery .post-img{
-
+.gallery {
+  
+  display: inline;
+  display: flex ;
+  flex-wrap: wrap;
+  flex-direction: row;
  justify-content: center;
  align-items: center;
- display: grid;
- width: 80vw;
- grid-template-columns: 1fr 1fr 1fr;
- column-gap: 10px;
- row-gap: 100px;
 }
 
-.post-img  img{
-  width: 330px;
-  height: 330px;
+.post-img>img{
+  padding: 0 20px 20px;
+  width: 350px;
+  height: 350px;
+  margin-top: 50px;
   object-fit: cover;
   object-position: center;  
   transform: scale(1.15);
   transition: transform 0.7s, opacity 0.5s;
+  
 }
 
  .post-img > img:hover {
