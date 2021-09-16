@@ -165,7 +165,7 @@ body {
 
 .gallery-nav {
 
-  width: 100%;
+  
   padding: 0px 0px;
   align-items: center;
   justify-content: center;
@@ -175,22 +175,29 @@ body {
   height: 100vh;
 }
 .gallery {
-  
-  display: inline;
-  display: flex ;
-  flex-wrap: wrap;
-  flex-direction: row;
- justify-content: center;
- align-items: center;
+
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+
+ padding: 50px;
+ row-gap: 50px;
+ 
+ width: 20em;
+ height: 20em;
+ 
+ 
 }
 
 .post-img>img{
-  padding: 0 20px 20px;
-  width: 350px;
-  height: 350px;
+  justify-items: center;
+  width: 20em;
+  height: 20em;
   margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-sizing: border-box;
   object-fit: cover;
-  object-position: center;  
+  object-position: center;
   transform: scale(1.15);
   transition: transform 0.7s, opacity 0.5s;
   
