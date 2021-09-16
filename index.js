@@ -1,10 +1,10 @@
 // A request to the JSON server for user information:
-const BASE_URL = 'http://localhost:3000/users';
+const BASE_USER_URL = 'http://localhost:3000/users';
+const BASE_POST_URL = 'http://localhost:3000/posts';
 
-fetch(BASE_URL)
+fetch(BASE_USER_URL)
 .then((res) => res.json())
 .then((userData) => userData.forEach((user, index) => renderUserPage(user, index))) // Sends individual user object for rendering
-
 
 
 // renderUserPage renders pre-made user pages
@@ -16,10 +16,27 @@ function renderUserPage(user, index){
 
 
 // adds a user to the status-card elements on the page
+// adds an eventListener when a user is selected.
 function renderUserBar(user, index){
-    const profilePic = document.getElementById(`profile-pic-${index+1}`);
-    const username = document.getElementById(`username-${index+1}`);
+    const userCard = document.getElementById(`card-${index}`);
+    const profilePic = document.getElementById(`profile-pic-${index}`);
+    const username = document.getElementById(`username-${index}`);
 
     profilePic.src = user.profile;
     username.textContent = user.name;
+
+    userCard.addEventListener('click', function (e){
+        fetch(BASE_POST_URL)
+        .then((res) => res.json())
+        .then((postData) => {
+            const filteredPosts = postData.filter(post => post.userId === user.userId)  // creates an array of filtered posts that are relevant to the current user
+            filteredPosts.forEach((post, index) => renderUserPosts(post, index))
+        })
+    })
+}
+
+function renderUserPosts(post, index){
+    const userPost = document.getElementById(`post-${index}`);
+
+    userPost.src = post.image;
 }
