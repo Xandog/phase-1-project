@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // renderUserPage renders pre-made user pages
     // stored in the JSON data base.
-    // Parameter(s): current user object, current index
+    // parameter(s): current user object, current index
     function renderUserPage(user, index){
-        // const userCard = 
-        renderUserBar(user, index);         // Renders the User Bar at the top of the page and returns a userCard
-        //userCard.addEventListener('click', renderUserPosts)
+        const userCard = renderUserBar(user, index);    // renders user Bar at the top of the page 
+        renderUserPosts(userCard, user);                // renders user posts
     }
 
 
     // adds a user to the status-card elements on the page
-    // adds an eventListener when a user is selected.
+    // returns address to a userCard element
+    // parameter(s): current user object, current index
     function renderUserBar(user, index){
         const userCard = document.getElementById(`card-${index}`);
         const profilePic = document.getElementById(`profile-pic-${index}`);
@@ -28,39 +28,29 @@ document.addEventListener('DOMContentLoaded', function(){
         profilePic.src = user.profile;
         username.textContent = user.name;
         
-        //return userCard;
-        // This event listener activates when the user clicks
+        return userCard;
+    }
+
+    function renderUserPosts(userCard, user){
+        // event listener activates when the user clicks
         // on the status-card 
-        userCard.addEventListener('click', function (e){
+        userCard.addEventListener('click', () => {
             fetch(BASE_POST_URL)
             .then((res) => res.json())
             .then((postData) => {
-                const filteredPosts = postData.filter(post => post.userId === user.userId)  // creates an array of filtered posts that are relevant to the current user
-                filteredPosts.forEach((post, index) => renderUserPosts(post, index))        // calls renderUserPosts
+            const filteredPosts = postData.filter(post => post.userId === user.userId)    // creates an array of filtered posts relevant to the current user
+            filteredPosts.forEach((post, index) => innerPostFunction(post, index))        // calls innerPostFunction
             })
         })
-    }
-
-    function renderUserPosts(post, index){
-        // fetch(BASE_POST_URL)
-        // .then((res) => res.json())
-        // .then((postData) => {
-        //     const filteredPosts = postData.filter(post => post.userId === user.userId)    // creates an array of filtered posts that are relevant to the current user
-        //     filteredPosts.forEach((post, index) => innerPostFunction(post, index))        // calls innerPostFunction
-        // })
-
-        // function innerPostFunction(post, index){
-        //     const userPost = document.getElementById(`post-${index}`);
-        //     //const postLikes = document.getElementById(`${}`);
         
-        //     userPost.src = post.image;
-        //     //postLikes = post.likes;
-        // }
-
-        const userPost = document.getElementById(`post-${index}`);
-        //const postLikes = document.getElementById(`${}`);
+        // parameter(s): current post object, current index
+        function innerPostFunction(post, index){
+            const userPost = document.getElementById(`post-${index}`);
+            //const postLikes = document.getElementById(`${}`);
         
-        userPost.src = post.image;
+            userPost.src = post.image;
+            //postLikes = post.likes;
+        }
     }
 })
 $(document).ready(function(){
