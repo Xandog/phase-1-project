@@ -176,15 +176,16 @@ body {
 }
 .gallery {
 
-  display: grid ;
+  display: grid;  
+      
   grid-template-columns: 1fr 1fr 1fr;
-
+  align-items: center;
+  justify-content: center;
  padding: 50px;
- row-gap: 50px;
  
- width: 20em;
- height: 20em;
+ object-fit: cover;
  
+
  
 }
 
@@ -195,7 +196,8 @@ body {
   margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  box-sizing: border-box;
+  
+
   object-fit: cover;
   object-position: center;
   transform: scale(1.15);
