@@ -256,6 +256,7 @@ body {
 footer{
     background-color: rgba(227, 219, 219, 0.749);
     padding: 30Px;
+    padding-top: 400px;
     font-size: 100%;
     margin-top: 0px;
 }
@@ -294,9 +295,13 @@ footer p{
 }
 
 
-/*---------------Like Display Colors--------------*/
+/*---------------Like Display------------------*/
 
 div.content button{
-    color:rgb(223, 8, 8)
+  color:rgb(223, 8, 8)
 }
 
+div.content{
+  padding-left: 200px;
+  padding-top: 50px;
+}

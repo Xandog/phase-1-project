@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
             .then((postData) => {
                 debugger;
             filteredPosts = postData.filter(post => post.userId === user.userId)    // creates an array of filtered posts relevant to the current user
-            filteredPosts.forEach((post, index) => innerPostFunction(post, index))  // calls innerPostFunction
+            filteredPosts.forEach((post, index) => innerPostFunction(post, index))        // calls innerPostFunction
             })
         })
         
@@ -51,23 +51,23 @@ document.addEventListener('DOMContentLoaded', function(){
             let likeDisplay = document.getElementById(`numb-${index}`)
 
             userPost.src = post.image;
-            likeDisplay.textContent = post.likes;  
+            likeDisplay.textContent = post.likes;
         }
     }
 
 
-    // event listener increments the likes (page-only) when the user clicks
+    // event listener increments the likes (aesthetically) when the user clicks
     // the like button and decrements when pressed again
     function buttonEventHandler(e){
         const index = e.target.dataset.index;
-        const ogLikes = post.likes;
-        const addedLikes = ogLikes+1;
-
         let likeDisplay = document.getElementById(`numb-${index}`)
         let post = filteredPosts[index];
-        let currentLikes = likeDisplay.textContent;
 
+
+        let currentLikes = likeDisplay.textContent;
         currentLikes = parseInt(currentLikes, 10)
+        const ogLikes = post.likes;
+        const addedLikes = ogLikes+1;
         
         if(currentLikes === ogLikes){
             currentLikes++
@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function(){
             likeDisplay.textContent = currentLikes;
         }
     }
+
+
     for(let i = 0; i <= 5; i++){
         const likeButton = document.getElementById(`heart-${i}`);
         likeButton.addEventListener('click', buttonEventHandler)
