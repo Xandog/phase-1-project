@@ -46,18 +46,33 @@ document.addEventListener('DOMContentLoaded', function(){
         // parameter(s): current post object, current index
         function innerPostFunction(post, index){
             const userPost = document.getElementById(`post-${index}`);
-            //const postLikes = document.getElementById(`${}`);
-        
+            let postLikes = document.getElementById(`heart-${index}`);
+
             userPost.src = post.image;
-            //postLikes = post.likes;
+            postLikes.textContent = post.likes;
+            postLikes.addEventListener('click', function (e){
+                let currentLikes = e.target.textContent;
+                currentLikes = parseInt(currentLikes, 10)
+                const ogLikes = post.likes;
+                const addedLikes = ogLikes+1;
+                debugger;
+                if(currentLikes === ogLikes){
+                    currentLikes++
+                    postLikes.textContent = currentLikes;
+                } else if(currentLikes === addedLikes){
+                    currentLikes--
+                    postLikes.textContent = currentLikes;
+                }
+                    
+            })
         }
     }
 })
-$(document).ready(function(){
-    $('.content').click(function(){
-      $('.content').toggleClass("heart-active")
-      $('.text').toggleClass("heart-active")
-      $('.numb').toggleClass("heart-active")
-      $('.heart').toggleClass("heart-active")
-    });
-  });
+// $(document).ready(function(){
+//     $('.content').click(function(){
+//       $('.content').toggleClass("heart-active")
+//       $('.text').toggleClass("heart-active")
+//       $('.numb').toggleClass("heart-active")
+//       $('.heart').toggleClass("heart-active")
+//     });
+//   });

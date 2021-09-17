@@ -208,7 +208,7 @@ body {
   transform: scale(1.03);
 }
 /* ----------Like Button----------- */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
 .heart-btn{
   position: relative;
   width: 110px;
@@ -233,7 +233,7 @@ body {
   transform: translate(-50%,-50%);
 }
 
-.numb:before{
+ .numb:before{
   content: '100';
   font-size: 20px;
   margin-left: 40px;
@@ -243,11 +243,11 @@ body {
 }
 .numb.heart-active:before{
   content: '101';
-  color: #000;
+  color: rgb(214, 7, 7);
 }
 .text.heart-active{
   color: rgb(0, 0, 0);
-}
+} */
 
 
 /* ------------Footer------------------- */
