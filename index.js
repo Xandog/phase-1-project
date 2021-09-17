@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // A request to the JSON server for user information:
     const BASE_USER_URL = 'http://localhost:3000/users';
     const BASE_POST_URL = 'http://localhost:3000/posts';
+    let filteredPosts;
 
     fetch(BASE_USER_URL)
     .then((res) => res.json())
@@ -38,38 +39,46 @@ document.addEventListener('DOMContentLoaded', function(){
             fetch(BASE_POST_URL)
             .then((res) => res.json())
             .then((postData) => {
-            const filteredPosts = postData.filter(post => post.userId === user.userId)    // creates an array of filtered posts relevant to the current user
-            filteredPosts.forEach((post, index) => innerPostFunction(post, index))        // calls innerPostFunction
+                debugger;
+            filteredPosts = postData.filter(post => post.userId === user.userId)    // creates an array of filtered posts relevant to the current user
+            filteredPosts.forEach((post, index) => innerPostFunction(post, index))  // calls innerPostFunction
             })
         })
         
         // parameter(s): current post object, current index
         function innerPostFunction(post, index){
             const userPost = document.getElementById(`post-${index}`);
-            const likeButton = document.getElementById(`heart-${index}`);
             let likeDisplay = document.getElementById(`numb-${index}`)
 
             userPost.src = post.image;
-            likeDisplay.textContent = post.likes;
-            debugger;
-            // event listener increments the likes (aesthetically) when the user clicks
-            // the like button and decrements when pressed again
-            likeButton.addEventListener('click', function (e){
-                let currentLikes = likeDisplay.textContent;
-                debugger;
-                currentLikes = parseInt(currentLikes, 10)
-                const ogLikes = post.likes;
-                const addedLikes = ogLikes+1;
-                debugger;
-                if(currentLikes === ogLikes){
-                    currentLikes++
-                    likeDisplay.textContent = currentLikes;
-                } else if(currentLikes === addedLikes){
-                    currentLikes--
-                    likeDisplay.textContent = currentLikes;
-                }
-                    debugger;
-            })
+            likeDisplay.textContent = post.likes;  
         }
+    }
+
+
+    // event listener increments the likes (page-only) when the user clicks
+    // the like button and decrements when pressed again
+    function buttonEventHandler(e){
+        const index = e.target.dataset.index;
+        const ogLikes = post.likes;
+        const addedLikes = ogLikes+1;
+
+        let likeDisplay = document.getElementById(`numb-${index}`)
+        let post = filteredPosts[index];
+        let currentLikes = likeDisplay.textContent;
+
+        currentLikes = parseInt(currentLikes, 10)
+        
+        if(currentLikes === ogLikes){
+            currentLikes++
+            likeDisplay.textContent = currentLikes;
+        } else if(currentLikes === addedLikes){
+            currentLikes--
+            likeDisplay.textContent = currentLikes;
+        }
+    }
+    for(let i = 0; i <= 5; i++){
+        const likeButton = document.getElementById(`heart-${i}`);
+        likeButton.addEventListener('click', buttonEventHandler)
     }
 })

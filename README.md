@@ -5,6 +5,6 @@ The goal of this project is to create a basic instagram clone with the theme of 
 
 - Utilizes HTML/CSS/JS and communicates with a JSON database
 - Runs on a single page (1 HTML file)
-- Utilizes at least 3 different eventListeners
+- Utilizes 3 seperate eventListeners
 - Webpage allows some user interaction
 - Uses functions in the JS file
