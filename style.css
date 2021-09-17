@@ -170,7 +170,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  background-image: url(https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url(https://d14zyouj9r0hpo.cloudfront.net/wp-content/uploads/2019/09/black-cat-adoption-and-other-october-facts.jpeg);
   background-size: cover;
   height: 100vh;
 }
@@ -294,5 +294,9 @@ footer p{
 }
 
 
+/*---------------Like Display Colors--------------*/
 
+div.content button{
+    color:rgb(223, 8, 8)
+}
 

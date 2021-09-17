@@ -46,24 +46,29 @@ document.addEventListener('DOMContentLoaded', function(){
         // parameter(s): current post object, current index
         function innerPostFunction(post, index){
             const userPost = document.getElementById(`post-${index}`);
-            let postLikes = document.getElementById(`heart-${index}`);
+            const likeButton = document.getElementById(`heart-${index}`);
+            let likeDisplay = document.getElementById(`numb-${index}`)
 
             userPost.src = post.image;
-            postLikes.textContent = post.likes;
-            postLikes.addEventListener('click', function (e){
-                let currentLikes = e.target.textContent;
+            likeDisplay.textContent = post.likes;
+            debugger;
+            // event listener increments the likes (aesthetically) when the user clicks
+            // the like button and decrements when pressed again
+            likeButton.addEventListener('click', function (e){
+                let currentLikes = likeDisplay.textContent;
+                debugger;
                 currentLikes = parseInt(currentLikes, 10)
                 const ogLikes = post.likes;
                 const addedLikes = ogLikes+1;
                 debugger;
                 if(currentLikes === ogLikes){
                     currentLikes++
-                    postLikes.textContent = currentLikes;
+                    likeDisplay.textContent = currentLikes;
                 } else if(currentLikes === addedLikes){
                     currentLikes--
-                    postLikes.textContent = currentLikes;
+                    likeDisplay.textContent = currentLikes;
                 }
-                    
+                    debugger;
             })
         }
     }
